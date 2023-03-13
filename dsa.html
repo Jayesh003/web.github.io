@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dsa</title>
+	<link rel="stylesheet" type="text/css" href="dsa.css">
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<div class="wrapper"> 
+    <nav>
+      <div class="content">
+         <Img Src="C:\html\chl.jpg" Class="Logoimg" height="60px" width="60px" style="border-radius: 50% ;" >
+      <div class="logotxt" ><a href="#"><h4 style="color : whitesmoke; text-shadow: 4px 4px 6px #000000;">CodingHub</h4></a></div>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+               <li><a href="#">SQL</a></li>
+               <li><a href="cnet.html">C#</a></li>
+               <li><a href="#">DS</a></li>
+        </ul>
+      </div>
+<div class="searchBox">
+            <input class="searchInput"type="text" name="" placeholder="Search..">
+            <button class="searchButton" href="#">
+                  <i class="fa fa-search"></i>
+                </i>
+            </button>
+        </div>
+
+   <label for="show-user" class="user-icon"><a href="form.html"><i class='fas fa-user-circle'></i></a></label>
+    </nav>
+  </div>
+
+
+  <div class="tab">
+    <button class="tablinks" onclick="openTopic(event, 'Array')" id="defaultOpen">Array</button>
+    <button class="tablinks" onclick="openTopic(event, 'searching')">searching</button>
+    <button class="tablinks" onclick="openCity(event, 'sorting')">sorting</button>
+    <button class="tablinks" onclick="openCity(event, 'stack')">stack</button> 
+    <button class="tablinks" onclick="openCity(event, 'queue')">queue</button>
+    <button class="tablinks" onclick="openCity(event, 'linked list')">linked list</button> 
+    <button class="tablinks" onclick="openCity(event, 'trees')">trees</button>
+    <button class="tablinks" onclick="openCity(event, 'graphs')">graphs</button>
+    <button class="tablinks" onclick="openCity(event, 'algorithams')">algorithams</button>
+
+
+</div>
+
+<div id="Array" class="tabcontent">
+ <div class="container">
+        <div class="video">
+            <div class="video__frame">
+                <iframe src="https://player.vimeo.com/video/39822385" width="250" height="150" frameborder="0"
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <h3>array</h3>
+    <p>
+An array is a linear data structure of fixed-size, which can hold items of the same data 
+type. It is sequential in manner. It can be an array of integers, an array of floating-point numbers, an 
+array of strings or even an array of arrays (such as 2-dimensional arrays). 
+Arrays are indexed, meaning that random access is possible</p>
+
+<img src="C:\html\array.png" alt="array image" class="array-img"  >
+<div class="example">
+<h3>Implementation of array</h3>
+<pre class="prettyprint">
+ <pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+using namespace std;
+ 
+int main () {
+
+   int n[ 10 ]; // n is an array of 10 integers
+ 
+   // initialize elements of array n to 0          
+   for ( int i = 0; i &lt; 10; i++ ) {
+      n[ i ] = i + 100; // set element at location i to i + 100
+   }
+   cout &lt;&lt; "Element" &lt;&lt; setw( 13 ) &lt;&lt; "Value" &lt;&lt; endl;
+ 
+   // output each array element's value                      
+   for ( int j = 0; j &lt; 10; j++ ) {
+      cout &lt;&lt; setw( 7 )&lt;&lt; j &lt;&lt; setw( 13 ) &lt;&lt; n[ j ] &lt;&lt; endl;
+   }
+ 
+   return 0;
+}
+
+</pre>
+</pre>
+</div>
+<pre class="result">
+Output :
+Element        Value
+      0              100
+      1              101
+      2              102
+      3              103
+      4              104
+      5              105
+      6              106
+      7              107
+      8              108
+      9              109
+</pre>
+
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<div id="japan" class="tabcontent">
+  <h3>japan</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<footer>
+    <div class="bottom">
+        <center>
+            <hr>
+            <Img Src="C:\html\chl.jpg" Class="Logoimg" height="60px" width="60px" style="border-radius: 50% ;" >
+          <span >Created By Jayesh Afre<span class="far fa-copyright"> 2023 All rights reserved.</span>
+          <hr>
+        </center>
+      </div>
+</footer>
+
+
+<script>
+function openTopic(evt, topicName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(topicName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   <script>
+         $('nav ul li.btn span').click(function(){
+           $('nav ul div.items').toggleClass("show");
+           $('nav ul li.btn span').toggleClass("show");
+         });
+      </script>
+
+
+     
+</body>
+</html>
